@@ -1,0 +1,47 @@
+body {
+  background-color: #1d1d1d;
+}
+.homepage-container h1 {
+  color: white;
+  text-align: center;
+}
+.av-sources-container {
+  color: white;
+  height: 100vh;
+}
+.apple,
+.netflix {
+  border: 1px solid white;
+  border-radius: 10px;
+  margin: 10% 10%;
+  height: 40%;
+}
+.apple {
+  background: url('https://static.wikia.nocookie.net/logopedia/images/2/22/AppleTV_2019Icon.svg/revision/latest/scale-to-width-down/340?cb=20190806081401');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.netflix {
+  background: url('https://mondrian.mashable.com/uploads%252Fcard%252Fimage%252F709715%252F7206ef35-1622-411f-8ded-62b0577c7f05.png%252F950x534__filters%253Aquality%252880%2529.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.apple-container,
+.netflix-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-size: 30px;
+}
+.subscribe-btn {
+  width: 200px;
+  padding: 10px;
+  font-size: 25px;
+  background-color: #28991d;
+  color: white;
+  border: none;
+}
+
+
+
