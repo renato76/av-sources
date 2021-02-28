@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import AvSources from './components/AvSources'
 import Apple from './components/Apple'
 import Netflix from './components/Netflix'
-
+import Notifications from 'react-notify-toast'
 
 
 // function component that uses BrowserRouter from react-router-dom to 
@@ -12,6 +12,7 @@ import Netflix from './components/Netflix'
 function App() {
   return (
     <BrowserRouter>
+      <Notifications />
       <Switch>
         <Route path="/apple" component={Apple} />   
         <Route path="/netflix" component={Netflix} /> 

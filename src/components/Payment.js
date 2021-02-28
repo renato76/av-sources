@@ -1,5 +1,6 @@
 import React from 'react'
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js'
+import { popupNotification } from './notification'
 
 const Payment = () => {
   const stripe = useStripe()
@@ -31,6 +32,7 @@ const Payment = () => {
     } else {
       console.log('[PaymentMethod]', paymentMethod)
     }
+    popupNotification('You have subscribed!')
   }
 
 
