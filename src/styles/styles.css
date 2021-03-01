@@ -102,22 +102,24 @@ h2 {
   border-radius: 12px;
   box-shadow: 0px 0px 0px 1px rgb(58, 57, 110);
   animation: anim-shadow .2s ease-in-out;
-  animation: 0.2s anim-shadow;
 }
 @keyframes anim-shadow {
   100% {
     box-shadow: 0px 0px 50px 20px #28991d;
   }
 }
+
 @keyframes pay-button {
   30% {
-    background-color: #28991d;
+    background-color: #38b92d;
   }
   100% {
     background-color: #28991d;
   }
 }
-.pay-btn {
+
+/* m */
+/* .pay-btn {
   width: 200px;
   padding: 6px;
   font-size: 18px;
@@ -135,6 +137,14 @@ h2 {
   animation: pay-button .3s linear;
   border-radius: 12px;
   box-shadow: 0px 0px 0px 1px rgb(58, 57, 110);
+} */
+
+
+
+/* this is the material UI button */
+.pay {
+  width: 200px;
+  background-color: #28991d;
 }
 .card-element {
   border: 1px solid white;
