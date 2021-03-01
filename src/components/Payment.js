@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js'
 import { popupNotification } from './notification'
 
@@ -35,61 +35,72 @@ const Payment = () => {
       console.log('[PaymentMethod]', paymentMethod)
       // pop up notification to say you have sucessfully subscribed
       popupNotification('You have subscribed!')
+      handleSubscribed()
     }
   }
-  
 
+  const [subscribed, setSubscribed] = useState(false)
+  
+  const handleSubscribed = () => setSubscribed(true)
   return (
-    <div className="payment">
-      <div className="payment__container">
-        {/* a simple form to collect some customer details */}
-        <form onSubmit={handleSubmit}>   
-          <div className="field">
-            <div className="control">
-              <input
-                className="name input"
-                placeholder="Name"
-                name="name" 
-              />
-            </div>
-            <div className="control">
-              <input
-                className="email input"
-                placeholder="Email"
-                name="email" 
-              />
-            </div>
-            <div className="control">
-              <input
-                className="phone input "
-                placeholder="Phone"
-                name="phone" 
-              />
-            </div>           
-          </div>  
-          {/* this is the cardElement from Stripe */}
-          <CardElement
-            className="card-element"
-            options={{
-              style: {
-                base: {
-                  fontSize: '16px',
-                  color: '#424770',
-                  '::placeholder': {
-                    color: '#aab7c4',
+    <div className="payment-container">
+      <div className="payment">
+        <div className="payment__container">
+          {/* a simple form to collect some customer details */}
+          <form onSubmit={handleSubmit}>   
+            <div className="field">
+              <div className="control">
+                <input
+                  className="name input"
+                  placeholder="Name"
+                  name="name" 
+                />
+              </div>
+              <div className="control">
+                <input
+                  className="email input"
+                  placeholder="Email"
+                  name="email" 
+                />
+              </div>
+              <div className="control">
+                <input
+                  className="phone input "
+                  placeholder="Phone"
+                  name="phone" 
+                />
+              </div>           
+            </div>  
+            {/* this is the cardElement from Stripe */}
+            <CardElement
+              className="card-element"
+              options={{
+                style: {
+                  base: {
+                    fontSize: '16px',
+                    color: '#424770',
+                    '::placeholder': {
+                      color: '#aab7c4',
+                    },
+                  },
+                  invalid: {
+                    color: '#9e2146',
                   },
                 },
-                invalid: {
-                  color: '#9e2146',
-                },
-              },
-            }}
-          />
-          <button className="pay-btn" type="submit" disabled={!stripe}>
-            PAY
-          </button>
-        </form>
+              }}
+            />
+            <button className="pay-btn" type="submit" disabled={!stripe}>
+              PAY
+            </button>
+          </form>
+        </div>
       </div>
+      {subscribed && 
+          <div className="videos">
+            <h2>Subscribed Content</h2>
+            <p>Only available if valid card details provided</p>
+          </div>
+      }
     </div>
   )
 }

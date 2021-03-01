@@ -1,5 +1,7 @@
 body {
   background-color: #1d1d1d;
+  margin: 0;
+  padding: 0;
 }
 .home-btn {
   color: white;
@@ -72,8 +74,8 @@ h2 {
   font-size: 20px;
 }
 .payment {
-  padding: 30px 5px;
-  width: 300px;
+  padding: 30px 5px 10px 5px;
+  width: 320px;
   background-color: #f0f0f0;
   text-align: center;
   border-radius: 15px;
@@ -87,8 +89,8 @@ h2 {
 }
 .subscribe-btn {
   width: 200px;
-  padding: 10px;
-  font-size: 25px;
+  padding: 5px 10px;
+  font-size: 22px;
   background-color: #28991d;
   color: white;
   border: 2px solid #27991d00;
@@ -119,14 +121,14 @@ h2 {
 }
 .pay-btn {
   width: 200px;
-  padding: 6px;
-  font-size: 18px;
+  padding: 5px;
+  font-size: 16px;
   background-color: #28991d;
   color: white;
   outline: none;
   border-radius: 12px;
   border: 2px solid #27991d00;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   cursor: pointer;
 }
 .pay-btn:focus {
@@ -146,5 +148,63 @@ h2 {
 ::placeholder {
   text-align: center;
   color: #aab7c4;
+}
+
+.tabs {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  text-align: center;
+}
+.tab {
+  border: 1px solid #acacac;
+  width: 33.33%;
+  justify-content: center;
+  height: 45px;
+}
+
+.tabs-btn {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-weight: bold;
+  color: #3f3f3f;
+  font-size: 14px;
+}
+.tabs-btn:hover {
+  cursor: pointer;
+}
+
+.tabs-btn {
+  background-color: #c9c9c9;
+  position: relative;
+  border: none;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.tabs-btn:after {
+  content: "";
+  background: #b1b1b1;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px!important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.tabs-btn:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
 }
 

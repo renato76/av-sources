@@ -26,23 +26,36 @@ function Apple() {
   const handleSubscribe = () => setSubscribe(true)
 
   return (
-    <div className="apple-container">
-      <div className="home-btn">
-        <Link to={'/'}>
-          <FaHome />
-        </Link>
+    <div className="container">
+      <div className="apple-container">
+        <div className="home-btn">
+          <Link to={'/'}>
+            <FaHome />
+          </Link>
+        </div>
+        <div className="title">
+          <h1>{product.name}</h1>
+        </div>
+        <div className="price">
+          <h2>£{product.price.toFixed(2)} per month</h2>
+        </div>
+        <button onClick={handleSubscribe} className="subscribe-btn">Subscribe</button>   
+        {subscribe && <Elements stripe={stripePromise}>
+          <Payment />
+        </Elements>
+        }
       </div>
-      <div className="title">
-        <h1>{product.name}</h1>
+      <div className="tabs">
+        <div className="tab">
+          <button className="tabs-btn">Photos</button>
+        </div>
+        <div className="tab">
+          <button className="tabs-btn">Music</button>
+        </div>
+        <div className="tab">
+          <button className="tabs-btn">Settings</button>
+        </div>
       </div>
-      <div className="price">
-        <h2>£{product.price.toFixed(2)} per month</h2>
-      </div>
-      <button onClick={handleSubscribe} className="subscribe-btn">Subscribe</button>   
-      {subscribe && <Elements stripe={stripePromise}>
-        <Payment />
-      </Elements>
-      }
     </div>
   )
 }
