@@ -42,9 +42,12 @@ a {
   transition: 500ms;
 }
 .apple {
-  background: url('https://static.wikia.nocookie.net/logopedia/images/2/22/AppleTV_2019Icon.svg/revision/latest/scale-to-width-down/340?cb=20190806081401');
+  background: url('https://itoucheg.com/wp-content/uploads/2020/05/apple-tv.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
+  -o-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
 }
 .netflix {
   background: url('https://mondrian.mashable.com/uploads%252Fcard%252Fimage%252F709715%252F7206ef35-1622-411f-8ded-62b0577c7f05.png%252F950x534__filters%253Aquality%252880%2529.png');
@@ -99,6 +102,7 @@ h2 {
   border-radius: 12px;
   box-shadow: 0px 0px 0px 1px rgb(58, 57, 110);
   animation: anim-shadow .2s ease-in-out;
+  animation: 0.2s anim-shadow;
 }
 @keyframes anim-shadow {
   100% {
