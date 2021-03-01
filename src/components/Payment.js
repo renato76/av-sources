@@ -1,7 +1,6 @@
 import React from 'react'
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js'
 import { popupNotification } from './notification'
-import Button from '@material-ui/core/Button'
 
 const Payment = () => {
   const stripe = useStripe()
@@ -86,12 +85,9 @@ const Payment = () => {
               },
             }}
           />
-          <Button variant="contained" className="pay" color="primary" type="submit" disabled={!stripe}>
-          PAY
-          </Button>
-          {/* <button variant="contained" type="submit" disabled={!stripe}>
+          <button className="pay-btn" type="submit" disabled={!stripe}>
             PAY
-          </button> */}
+          </button>
         </form>
       </div>
     </div>

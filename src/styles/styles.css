@@ -117,9 +117,7 @@ h2 {
     background-color: #28991d;
   }
 }
-
-/* m */
-/* .pay-btn {
+.pay-btn {
   width: 200px;
   padding: 6px;
   font-size: 18px;
@@ -137,15 +135,8 @@ h2 {
   animation: pay-button .3s linear;
   border-radius: 12px;
   box-shadow: 0px 0px 0px 1px rgb(58, 57, 110);
-} */
-
-
-
-/* this is the material UI button */
-.pay {
-  width: 200px;
-  background-color: #28991d;
 }
+
 .card-element {
   border: 1px solid white;
   border-radius: 8px;
