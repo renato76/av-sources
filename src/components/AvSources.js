@@ -8,12 +8,10 @@ function AvSources() {
       <div className="av-sources-container">
         <Link to={'/apple'}>
           <div className="apple">
-            {/* <h1>Apple</h1> */}
           </div>
         </Link>
         <Link to={'/netflix'}>
           <div className="netflix">
-            {/* <h1>Netflix</h1> */}
           </div>
         </Link>
       </div>

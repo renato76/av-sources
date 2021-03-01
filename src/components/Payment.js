@@ -29,10 +29,13 @@ const Payment = () => {
 
     if (error) {
       console.log('[error]', error)
+      // popup error message if incorrect details provided
+      popupNotification('Incorrect card details')
     } else {
       console.log('[PaymentMethod]', paymentMethod)
+      // pop up notification to say you have sucessfully subscribed
+      popupNotification('You have subscribed!')
     }
-    popupNotification('You have subscribed!')
   }
 
 

@@ -10,17 +10,21 @@ import { Link } from 'react-router-dom'
 const stripePromise = loadStripe('pk_test_51IP6q8FYl0iUsoekQauV8XQIdJ40AvrAjGceQxTiWLsMUhIBNEDzKZSJrnHNNGx2HyPQ3TU1TMU7KsCz2CeEVSIJ00XnSfKC87')
 
 
+// a function that storers an object with product details
 function Apple() {
   const [product] =  useState({
     name: 'Apple TV',
     price: 5.00,
   })
 
+  // using React useState hooks to store subscribe button state,
+  // initially set to false so you cannot see the checkout form
   const [subscribe, setSubscribe] = useState(false)
 
+  // then when the handleSubscribe function is called, it sets subscribe to true,
+  // and opens up the checkout form
   const handleSubscribe = () => setSubscribe(true)
 
-  
   return (
     <div className="apple-container">
       <div className="home-btn">

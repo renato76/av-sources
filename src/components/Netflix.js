@@ -9,15 +9,22 @@ import { Link } from 'react-router-dom'
 // recreating the `Stripe` object on every render.
 const stripePromise = loadStripe('pk_test_51IP6q8FYl0iUsoekQauV8XQIdJ40AvrAjGceQxTiWLsMUhIBNEDzKZSJrnHNNGx2HyPQ3TU1TMU7KsCz2CeEVSIJ00XnSfKC87')
 
+
+// a function that storers an object with product details
 function Netflix() {
   const [product] =  useState({
     name: 'Netflix',
     price: 9.99,
   })
 
+  // using React useState hooks to store subscribe button state,
+  // initially set to false so you cannot see the checkout form
   const [subscribe, setSubscribe] = useState(false)
 
+  // then when the handleSubscribe function is called, it sets subscribe to true,
+  // and opens up the checkout form
   const handleSubscribe = () => setSubscribe(true)
+  
   return (
     <div className="apple-container">
       <div className="home-btn">
@@ -32,7 +39,8 @@ function Netflix() {
         <h2>£{product.price} per month</h2>
       </div>
       <button onClick={handleSubscribe} className="subscribe-btn">Subscribe</button>   
-      {subscribe && <Elements stripe={stripePromise}>
+      {subscribe && 
+      <Elements stripe={stripePromise}>
         <Payment />
       </Elements>
       }
