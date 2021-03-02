@@ -35,6 +35,8 @@ const Payment = () => {
       console.log('[PaymentMethod]', paymentMethod)
       // pop up notification to say you have sucessfully subscribed
       popupNotification('You have subscribed!')
+      // call the handleSubscribed function to set subscribed to true 
+      // which then renders the premium content!
       handleSubscribed()
     }
   }

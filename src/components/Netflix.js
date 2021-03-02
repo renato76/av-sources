@@ -46,6 +46,7 @@ function Netflix() {
         </Elements>
         }
       </div>
+      {/* tabs at the bottom of Netflix and Apple pages */}
       <div className="tabs">
         <div className="tab">
           <button className="tabs-btn">Photos</button>
